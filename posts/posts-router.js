@@ -6,7 +6,7 @@ const router = express.Router()
 
 
 
-router.post('/', (req, res) => {
+router.post('/', async (req, res) => {
     try {
         const posts = await Posts.insert(req.post);
         res.status(200).json(posts)
@@ -34,7 +34,7 @@ router.get('/', async (req, res) => {
 
 
 
-router.get('/:id', (req, res) => {
+router.get('/:id', async (req, res) => {
     try {
         const posts = await Posts.findById(req.params.id);
         res.status(200).json(posts)
@@ -48,7 +48,7 @@ router.get('/:id', (req, res) => {
 
 
 
-router.delete('/:id', (req, res) => {
+router.delete('/:id', async (req, res) => {
     try {
         const posts = await Posts.remove(req.params.id);
         res.status(200).json(posts)
@@ -63,7 +63,7 @@ router.delete('/:id', (req, res) => {
 
 
 
-router.put('/:id', (req, res) => {
+router.put('/:id', async (req, res) => {
     try {
         const posts = await Posts.update(req.params.id);
         res.status(200).json(posts)
