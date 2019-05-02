@@ -13,9 +13,17 @@ Use `Node.js` and `Express` to build an API that performs _CRUD_ operations on `
 ### Project Setup
 
 - **Fork** and **Clone** this repository.
+done
+
 - **CD into the folder** where you cloned the repository.
+done
+
 - Type `yarn` or `npm install` to download all dependencies.
+done
+
 - To start the server, type `yarn server` or `npm run server` from the root folder (where the _package.json_ file is). The server is configured to restart automatically as you make changes.
+
+
 
 ### Database Persistence Helpers
 
@@ -84,6 +92,11 @@ When the client makes a `POST` request to `/api/posts`:
   - respond with HTTP status code `500` (Server Error).
   - return the following JSON object: `{ error: "There was an error while saving the post to the database" }`.
 
+
+
+
+
+
 When the client makes a `GET` request to `/api/posts`:
 
 - If there's an error in retrieving the _posts_ from the database:
@@ -102,6 +115,10 @@ When the client makes a `GET` request to `/api/posts/:id`:
   - cancel the request.
   - respond with HTTP status code `500`.
   - return the following JSON object: `{ error: "The post information could not be retrieved." }`.
+
+
+
+
 
 When the client makes a `DELETE` request to `/api/posts/:id`:
 
